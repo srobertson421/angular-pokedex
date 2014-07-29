@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <!-- SCROLLS -->
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+        <!-- SPELLS -->
+        <!-- load angular via CDN -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div ng-controller="pokeController">
+            <input ng-model="pokeNum" placeholder="Enter the Pokemon number" style="width:200px">
+            <button ng-click="getPokemon()">Get Pokemon!</button>
+            <div>{{ pokemon.name }}</div>
+            <img ng-src="{{ pokemon.sprite }}" />
+        </div>
+    </body>
+</html>
